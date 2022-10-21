@@ -34,7 +34,7 @@ button {
   padding: 10px 61px 14px 61px;
 }
 
-.hamburger {
+.hamburger, .cross {
   display: none;
 }
 
@@ -54,6 +54,8 @@ button {
 
 .nav_item {
   display: block;
+  padding-bottom: 34px;
+  margin-bottom: -34px;
 }
 .nav_item:hover .dropdown {
   visibility: visible;

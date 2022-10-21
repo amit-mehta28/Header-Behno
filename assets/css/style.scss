@@ -38,7 +38,7 @@ button {
   padding: 10px 61px 14px 61px;
 }
 
-.hamburger {
+.hamburger, .cross {
   display: none;
 }
 
@@ -58,6 +58,8 @@ button {
 
 .nav_item {
   display: block;
+  padding-bottom: 34px;
+  margin-bottom: -34px;
   &:hover .dropdown {
     visibility: visible;
     opacity: 1;
@@ -157,6 +159,7 @@ button {
   .hamburger {
     display: flex;
     align-items: center;
+   
   }
 
   .res-d-none {
@@ -179,6 +182,13 @@ button {
       left: 0%;
     }
   }
+
+  // .mob_hamburger.active > .hamburger{
+  //   display: none;
+  // }
+  // .mob_hamburger.active > .cross{
+  //   display: block;
+  // }
 
   .mob_hamb {
     margin-bottom: 42px;
