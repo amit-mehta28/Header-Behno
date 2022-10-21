@@ -1,0 +1,248 @@
+/* Common Css*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+
+$dropdown-bg-color: #e9e7e3;
+
+a {
+  text-decoration: none;
+  border: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.d-flex {
+  display: flex;
+}
+
+// header
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  padding: 10px 61px 14px 61px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.mob_hamburger {
+  display: none;
+}
+
+.nav_list {
+  gap: 45px;
+  align-items: center;
+}
+
+.nav_list_right {
+  justify-content: flex-end;
+  gap: 50px;
+}
+
+.nav_item {
+  display: block;
+  &:hover .dropdown {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+// Dropdown page Handbag & Wallets
+.dropdown {
+  visibility: hidden;
+  width: 513px;
+  height: 100vh;
+  padding: 31px 52px 110px;
+  background: $dropdown-bg-color;
+  position: fixed;
+  top: 80px;
+  left: 0px;
+  opacity: 0;
+  overflow-y: auto;
+  transition: all 0.6s;
+}
+
+.dropdown_item {
+  margin-bottom: 50px;
+  justify-content: space-between;
+}
+
+.dropdown_nav_heading {
+  margin: 17px 0px;
+}
+
+.dropdown_nav_item {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin: 0px;
+  }
+}
+
+.dropdown_nav_link:hover {
+  color: #767676;
+}
+
+.dropdown_img1 {
+  margin-top: 10px;
+}
+
+/* Nanamota */
+
+.dropdown_nav_up {
+  margin-top: 17px;
+}
+
+.dropdown_down {
+  padding: 52px 29px;
+  background-color: #758f8f;
+}
+
+.nanamota_logo {
+  margin-bottom: 24px;
+}
+
+.nanamota_text {
+  width: 300px;
+  color: white;
+}
+
+.nanamota_link_heading {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+
+.nanamota_link {
+  display: block;
+  margin-bottom: 2px;
+}
+
+//Sense of Behno
+
+.sense_behno_img {
+  position: absolute;
+  right: 0px;
+}
+
+.nav_list_right .dropdown {
+  left: auto;
+  right: 0px;
+}
+
+// Responsive Navbar Screen Size - 1100px
+
+@media (max-width: 1100px) {
+  .header {
+    padding: 8px 20px 10px;
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: center;
+  }
+
+  .res-d-none {
+    display: none;
+  }
+
+  .mob_hamburger {
+    display: block;
+    position: fixed;
+    top: 74px;
+    left: -100%;
+    width: 310px;
+    height: 100vh;
+    padding: 53px 30px 135px;
+    background: $dropdown-bg-color;
+    transition: all 0.8s cubic-bezier(0.71, 0, 0.33, 1.46);
+    overflow-y: auto;
+
+    &.active {
+      left: 0%;
+    }
+  }
+
+  .mob_hamb {
+    margin-bottom: 42px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .mob_sublist {
+    display: none;
+    margin: 24px 0 42px;
+  }
+
+  .mob_sub_btn {
+    font-weight: bold;
+  }
+
+  .mob_item {
+    margin-bottom: 18px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .mob_item.active .mob_sublist {
+    display: block;
+  }
+
+  .mob_sublist_list {
+    margin: 19px 0 42px;
+    display: none;
+  }
+  .mob_sub_item.active .mob_sublist_list {
+    display: block;
+  }
+
+  .mob_sub_item {
+    margin-bottom: 9px;
+  }
+
+  .mob_btn,
+  .mob_sub_btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .minus, .sub_minus {
+    display: none;
+  }
+
+  .mob_item.active .minus {
+    display: block;
+  }
+
+  .mob_item.active .plus {
+    display: none;
+  }
+
+  .mob_sub_item.active .sub_minus {
+    display: block;
+  }
+
+  .mob_sub_item.active .sub_plus {
+    display: none;
+  }
+}
